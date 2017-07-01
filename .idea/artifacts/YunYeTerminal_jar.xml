@@ -1,0 +1,19 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="YunYeTerminal:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/YunYeTerminal_jar</output-path>
+    <root id="archive" name="YunYeTerminal.jar">
+      <element id="module-output" name="YunYeTerminal" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/YunYeTerminal.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/commons-io-2.5.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/dangmianfu_demo_java2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/print.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/dangmianfu_demo_java.jar" path-in-jar="/" />
+      <element id="library" level="project" name="YunYeTerminal1" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/icepdf/icepdf-pro.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/icepdf/icepdf-extra.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/icepdf/icepdf-pro-intl.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/icepdf/icepdf-viewer.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/icepdf/icepdf-core.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

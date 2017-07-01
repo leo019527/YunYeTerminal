@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="YunYeTerminal1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/out/artifacts/YunYeTerminal_jar/YunYeTerminal.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

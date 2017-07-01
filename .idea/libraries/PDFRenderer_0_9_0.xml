@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="PDFRenderer-0.9.0">
+    <CLASSES>
+      <root url="jar://E:/workspace/libs/print/PDFRenderer-0.9.0.jar!/" />
+      <root url="jar://E:/workspace/libs/print/pdfbox-1.8.13.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/print.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="icepdf">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/icepdf/icepdf-pro.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/icepdf/icepdf-extra.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/icepdf/icepdf-pro-intl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/icepdf/icepdf-viewer.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/icepdf/icepdf-core.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
