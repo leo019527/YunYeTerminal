@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jpg2pdf">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/jpg2pdf.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

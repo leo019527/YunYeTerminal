@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="jar://$PROJECT_DIR$/lib/jpg2pdf.jar!/jpg2pdf/jpg2pdf_IText_helper.txt" charset="GBK" />
     <file url="file://$PROJECT_DIR$/lib/打印readme.txt" charset="GBK" />
   </component>
 </project>

@@ -1,4 +1,4 @@
-package com.yunye;
+package com.yunye.tests;
 
 import com.sun.image.codec.jpeg.JPEGCodec;
 import com.sun.image.codec.jpeg.JPEGEncodeParam;
@@ -21,7 +21,7 @@ import java.io.FileOutputStream;
 /**
  * Created by 李凌耀 on 2017/6/8.
  */
-public class test {
+public class testPac {
     /*
      * 加边框
      */
@@ -195,8 +195,8 @@ public class test {
 //        /*这儿填写你转化后的图片存放的文件夹*/
 //
 //
-//        test test = new test();
-//        test.writeHighQuality(test.zoomImage(inputFoler), outputFolder);
+//        testPac testPac = new testPac();
+//        testPac.writeHighQuality(testPac.zoomImage(inputFoler), outputFolder);
 //
 //    }
 

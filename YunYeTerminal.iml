@@ -19,5 +19,6 @@
     <orderEntry type="library" name="YunYeTerminal" level="project" />
     <orderEntry type="library" name="lib" level="project" />
     <orderEntry type="library" name="YunYeTerminal1" level="project" />
+    <orderEntry type="library" name="jpg2pdf" level="project" />
   </component>
 </module>

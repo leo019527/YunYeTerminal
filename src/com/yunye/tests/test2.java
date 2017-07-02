@@ -1,4 +1,4 @@
-package com.yunye;
+package com.yunye.tests;
 
 import javax.swing.*;
 import java.awt.*;

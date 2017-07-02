@@ -19,8 +19,8 @@ under the License.
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <!--
     - Note that due to the special requirements of logging unit-tests, most
-    - tests are executed in the "integration-test" phase rather than the
-    - "test" phase. Please run "mvn integration-test" to run the full suite of
+    - tests are executed in the "integration-testPac" phase rather than the
+    - "testPac" phase. Please run "mvn integration-testPac" to run the full suite of
     - available unit tests.
     -->
   <parent>
@@ -182,7 +182,7 @@ under the License.
       <!--
         - We want to create four jarfiles from this project: normal, tests, api
         - and adapters. The first two are handled by the normal jar:jar and
-        - jar:test-jar targets.
+        - jar:testPac-jar targets.
         - The jar plugin with some includes/excludes is used to create the other
         - ones.
         -->
@@ -192,7 +192,7 @@ under the License.
         <executions>
           <execution>
             <!--
-              - The custom test framework requires the unit test code to be
+              - The custom testPac framework requires the unit testPac code to be
               - in a jarfile so it can control its place in the classpath.
               -->
             <id>testjar</id>
@@ -328,7 +328,7 @@ under the License.
           - JCL jarfiles on the classpath in various configurations. This means
           - that those tests must be run *after* the "package" build phase.
           -
-          - In order to not mess with the Ant build we "disable" the normal test
+          - In order to not mess with the Ant build we "disable" the normal testPac
           - phase. This is done by skipping the execution of the surefire plugin.
           -->
         <groupId>org.apache.maven.plugins</groupId>
@@ -362,7 +362,7 @@ under the License.
           - that those tests must be run *after* the "package" build phase.
           -
           - For this we use the failsafe plugin which is bound to the
-          - "integration-test" phase by default.
+          - "integration-testPac" phase by default.
           -->
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-failsafe-plugin</artifactId>
@@ -534,7 +534,7 @@ under the License.
     <commons.rc.version>RC2</commons.rc.version>
     <commons.surefire.version>2.12</commons.surefire.version>
     <skipSurefireReport>true</skipSurefireReport>
-    <!-- Allow default test run order to be changed -->
+    <!-- Allow default testPac run order to be changed -->
     <failsafe.runorder>filesystem</failsafe.runorder>
     
     <commons.osgi.import>

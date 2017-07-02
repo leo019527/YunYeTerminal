@@ -47,7 +47,8 @@ Import-Package: javax.jmdns;resolution:=optional,javax.jms;resolution:
  =optional,javax.mail;resolution:=optional,javax.mail.internet;resolut
  ion:=optional,javax.management,javax.naming,javax.xml.parsers,org.w3c
  .dom,org.xml.sax,org.xml.sax.helpers,
- javax.swing
+ javax.swing,
+ javax.imageio
 
 Name: org.apache.log4j
 DynamicImport-Package: *
