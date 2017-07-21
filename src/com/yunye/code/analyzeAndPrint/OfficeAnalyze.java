@@ -168,8 +168,27 @@ public class OfficeAnalyze {
         return -1;
     }
 
+    public void setPages(int pages) {
+        this.pages = pages;
+    }
+
     public void print()
     {
+        String path2 = file.getPath();
+        String split = path2.substring(path2.indexOf('.') + 1, path2.length());
+        split = split.toLowerCase();
+        if(split == "doc" || split == "docx")
+        {
+            type = 1;
+        }
+        else if(split == "ppt" || split == "pptx")
+        {
+            type = 3;
+        }
+        else if(split == "pdf")
+        {
+            type = 2;
+        }
         String command;
         Runtime runtime = Runtime.getRuntime();
 //        try {

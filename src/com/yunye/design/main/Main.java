@@ -125,21 +125,21 @@ public class Main extends JFrame {
         label.add(distribution);
         //</editor-fold>
 
-        //<editor-fold desc="点我开始云打印">
-        ImageIcon icon1 = new ImageIcon("pic/main/main_startUp.png");
-        icon1.setImage(icon1.getImage().getScaledInstance((int) (Toolkit.getDefaultToolkit().getScreenSize().width*0.160),
-                (int)(Toolkit.getDefaultToolkit().getScreenSize().height*0.068),Image.SCALE_DEFAULT));
-        JButton startUp = new JButton();
-        startUp.setIcon(icon1);
-        startUp.setBounds((int) (Toolkit.getDefaultToolkit().getScreenSize().width*0.662),
-                (int)(Toolkit.getDefaultToolkit().getScreenSize().height*0.911),
-                (int) (Toolkit.getDefaultToolkit().getScreenSize().width*0.160),
-                (int)(Toolkit.getDefaultToolkit().getScreenSize().height*0.068));
-        startUp.setBorderPainted(false);
-        startUp.setContentAreaFilled(false);
-        startUp.addActionListener(new startUpActionListener());
-        label.add(startUp);
-        //</editor-fold>
+//        //<editor-fold desc="点我开始云打印">
+//        ImageIcon icon1 = new ImageIcon("pic/main/main_startUp.png");
+//        icon1.setImage(icon1.getImage().getScaledInstance((int) (Toolkit.getDefaultToolkit().getScreenSize().width*0.160),
+//                (int)(Toolkit.getDefaultToolkit().getScreenSize().height*0.068),Image.SCALE_DEFAULT));
+//        JButton startUp = new JButton();
+//        startUp.setIcon(icon1);
+//        startUp.setBounds((int) (Toolkit.getDefaultToolkit().getScreenSize().width*0.662),
+//                (int)(Toolkit.getDefaultToolkit().getScreenSize().height*0.911),
+//                (int) (Toolkit.getDefaultToolkit().getScreenSize().width*0.160),
+//                (int)(Toolkit.getDefaultToolkit().getScreenSize().height*0.068));
+//        startUp.setBorderPainted(false);
+//        startUp.setContentAreaFilled(false);
+//        startUp.addActionListener(new startUpActionListener());
+//        label.add(startUp);
+//        //</editor-fold>
 
         //<editor-fold desc="联系我们">
         ImageIcon icon2 = new ImageIcon("pic/main/main_contactus.png");
@@ -158,15 +158,15 @@ public class Main extends JFrame {
         //</editor-fold>
 
         //测试时方便退出
-//        JButton eeee = new JButton("测试退出");
-//        eeee.setBounds(0,0,200,50);
-//        eeee.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                System.exit(0);
-//            }
-//        });
-//        label.add(eeee);
+        JButton eeee = new JButton("测试退出");
+        eeee.setBounds(0,0,200,50);
+        eeee.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
+        label.add(eeee);
 
         //<editor-fold desc="设置窗口大小并全屏显示">
         //设置窗口基本大小
@@ -175,7 +175,7 @@ public class Main extends JFrame {
                 (int)(Toolkit.getDefaultToolkit().getScreenSize().height));
         //以下两句完成了全屏显示
         this.setUndecorated(true);
-        this.getGraphicsConfiguration().getDevice().setFullScreenWindow(this);
+//        this.getGraphicsConfiguration().getDevice().setFullScreenWindow(this);
         this.setVisible(true);
         //</editor-fold>
         System.out.println("生成主界面成功");
@@ -338,5 +338,59 @@ class contactusActionListener implements ActionListener
     @Override
     public void actionPerformed(ActionEvent e) {
         //TODO:插入联系我们代码
+        JFrame main = new JFrame();
+
+        //<editor-fold desc="插入背景图">
+        //插入背景图
+        ImageIcon indexBG = new ImageIcon("pic/main/contactus.png");//背景图index_bg.jpg
+        indexBG.setImage(indexBG.getImage().getScaledInstance((int)(Toolkit.getDefaultToolkit().getScreenSize().width*0.566),
+                (int)(Toolkit.getDefaultToolkit().getScreenSize().height*0.531),Image.SCALE_DEFAULT));
+        JLabel label = new JLabel();
+        label.setIcon(indexBG);
+        label.setBounds(0, 0, Toolkit.getDefaultToolkit().getScreenSize().width,
+                Toolkit.getDefaultToolkit().getScreenSize().height);
+        main.add(label);
+        //</editor-fold>
+
+        //<editor-fold desc="选择文件界面 退出">
+        ImageIcon usb_choose_exit = new ImageIcon("pic/main/main_back.png");
+        usb_choose_exit.setImage(usb_choose_exit.getImage().getScaledInstance((int) (Toolkit.getDefaultToolkit().getScreenSize().width * 0.0877),
+                (int) (Toolkit.getDefaultToolkit().getScreenSize().height * 0.048), Image.SCALE_DEFAULT));
+        JButton usb_choose_exitButton = new JButton();
+        usb_choose_exitButton.setIcon(usb_choose_exit);
+        usb_choose_exitButton.setBounds((int) (Toolkit.getDefaultToolkit().getScreenSize().width * 0.44),
+                (int) (Toolkit.getDefaultToolkit().getScreenSize().height * 0.007),
+                (int) (Toolkit.getDefaultToolkit().getScreenSize().width * 0.151),
+                (int) (Toolkit.getDefaultToolkit().getScreenSize().height * 0.072));
+        usb_choose_exitButton.setBorderPainted(false);
+        usb_choose_exitButton.setContentAreaFilled(false);
+        usb_choose_exitButton.addActionListener(new ExitListener(main));
+        label.add(usb_choose_exitButton);
+        //</editor-fold>
+
+
+        main.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        main.setSize((int) (Toolkit.getDefaultToolkit().getScreenSize().width*0.566),
+                (int)(Toolkit.getDefaultToolkit().getScreenSize().height*0.531));
+        main.setLocation((int) (Toolkit.getDefaultToolkit().getScreenSize().width*0.22),
+                (int)(Toolkit.getDefaultToolkit().getScreenSize().height*0.23));
+        //以下两句完成了全屏显示
+        main.setUndecorated(true);
+//        this.getGraphicsConfiguration().getDevice().setFullScreenWindow(this);
+        main.setVisible(true);
+    }
+}
+
+class ExitListener implements ActionListener
+{
+    JFrame jFrame;
+
+    public ExitListener(JFrame jFrame) {
+        this.jFrame = jFrame;
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        jFrame.dispose();
     }
 }

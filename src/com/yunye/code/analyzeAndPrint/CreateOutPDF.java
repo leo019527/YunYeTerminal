@@ -14,6 +14,7 @@ import java.net.MalformedURLException;
 
 /**
  * Created by 李凌耀 on 2017/7/2.
+ * 将D:\\out.pdf中的图片转换成pdf
  */
 public class CreateOutPDF {
     public static void create()

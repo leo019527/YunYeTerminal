@@ -1,11 +1,14 @@
 package com.yunye.design.online;
 
+import com.yunye.tests.Client;
 import org.apache.pdfbox.PrintPDF;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.*;
+import java.net.Socket;
 
 /**
  * Created by 李凌耀 on 2017/3/7.
@@ -239,39 +242,16 @@ class onlinePrintActionListener implements ActionListener
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        try {
-            PrintPDF.main(new String[]{"-silentPrint","D:\\out.pdf"});
-        } catch (Exception e2) {
-            e2.printStackTrace();
+        int num = Integer.parseInt(jTextField.getText());
+        if(num<=99999)
+        {
+            JOptionPane.showConfirmDialog (null, "输入六位验证码", "友情提示", JOptionPane.OK_OPTION);
         }
-        System.out.println("pdf打印开始");
+        else
+        {
+            Client.main(jTextField.getText());
+        }
         this.jFrame.dispose();
-//        int num = Integer.parseInt(jTextField.getText());
-//        if(num<=99999)
-//        {
-//            JOptionPane.showConfirmDialog (null, "输入六位验证码", "友情提示", JOptionPane.OK_OPTION);
-//        }
-//        else
-//        {
-//            //上传验证码到服务器,并返回文件保存位置
-//            submitToServer submit = new submitToServer(num);
-//            String file = submit.submit();
-//
-//            //转换为pdf；
-//            if(!file.equals(""))
-//            {
-//                PDFUtil pdfUtil = new PDFUtil();
-//                pdfUtil.convert2PDF(file,"D:\\out.pdf");
-//            }
-//
-//            try {
-//                PrintPDF.main(new String[]{"-silentPrint", "D:\\out.pdf"});
-//            }
-//            catch (Exception x)
-//            {
-//                x.printStackTrace();
-//            }
-//        }
     }
 }
 
